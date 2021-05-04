@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fregment.Fragment_ManagerDevices">
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewManageDevices"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/editText4DeviceName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/editbox_background_add_panel"
+        android:elevation="10dp"
+        android:layout_marginEnd="10dp"
+        android:hint="@string/Device"
+        android:padding="12dp"
+        android:textSize="18dp"
+        app:layout_constraintEnd_toStartOf="@+id/editText6DeviceNumber"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerViewManageDevices" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/editText6DeviceNumber"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/editbox_background_add_panel"
+        android:elevation="10dp"
+        android:hint="@string/Number"
+        android:padding="12dp"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="@+id/editText4DeviceName"
+        app:layout_constraintEnd_toStartOf="@+id/ZoneDeleteItem"
+        app:layout_constraintTop_toTopOf="@+id/editText4DeviceName"
+        />
+    <ImageButton
+        android:id="@+id/ZoneDeleteItem"
+        android:layout_marginEnd="10dp"
+        android:layout_width="50dp"
+        android:layout_height="0dp"
+        android:background="@drawable/shape"
+        android:backgroundTint="@color/blue"
+        android:elevation="10dp"
+        android:foregroundGravity="center"
+        android:padding="10dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_add"
+        app:layout_constraintBottom_toBottomOf="@+id/editText6DeviceNumber"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/editText6DeviceNumber" />
+</androidx.constraintlayout.widget.ConstraintLayout>

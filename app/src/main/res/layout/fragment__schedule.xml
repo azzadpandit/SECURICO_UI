@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fregment.Fragment_Schedule">
+    <RadioGroup
+        android:id="@+id/EnableOption"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="@+id/textView11"
+        app:layout_constraintStart_toStartOf="@+id/textView11"
+        app:layout_constraintTop_toBottomOf="@+id/textView11">
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:hint="@string/Yes" />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:hint="@string/No" />
+    </RadioGroup>
+    <TextView
+        android:layout_marginTop="10dp"
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/EnableSchedule"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/ScheduleOption"
+        app:layout_constraintTop_toBottomOf="@+id/ScheduleOption" />
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/appCompatEditText3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/editbox_background_add_panel"
+        android:elevation="10dp"
+        android:hint="@string/EndTime"
+        android:padding="12dp"
+        android:textSize="18dp"
+        app:layout_constraintEnd_toEndOf="@+id/appCompatEditText2"
+        app:layout_constraintStart_toStartOf="@+id/appCompatEditText2"
+        app:layout_constraintTop_toBottomOf="@+id/appCompatEditText2" />
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/appCompatEditText2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/editbox_background_add_panel"
+        android:elevation="10dp"
+        android:hint="@string/StartTime"
+        android:padding="12dp"
+        android:textSize="18dp"
+        app:layout_constraintEnd_toEndOf="@+id/appCompatEditText"
+        app:layout_constraintStart_toStartOf="@+id/appCompatEditText"
+        app:layout_constraintTop_toBottomOf="@+id/appCompatEditText" />
+    <androidx.appcompat.widget.AppCompatEditText
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:id="@+id/appCompatEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/editbox_background_add_panel"
+        android:elevation="10dp"
+        android:hint="@string/ZoneNumber"
+        android:padding="12dp"
+        android:textSize="18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/SounderActivateWithinSchedule"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/appCompatEditText3"
+        app:layout_constraintTop_toBottomOf="@+id/appCompatEditText3" />
+    <RadioGroup
+        android:id="@+id/ScheduleOption"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="@+id/textView6"
+        app:layout_constraintStart_toStartOf="@+id/textView6"
+        app:layout_constraintTop_toBottomOf="@+id/textView6">
+        <RadioButton
+            android:checked="false"
+            android:hint="@string/Yes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <RadioButton
+            android:checked="false"
+            android:hint="@string/No"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RadioGroup>
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="40dp"
+        android:backgroundTint="@color/blue"
+        android:text="@string/Send"
+        android:textSize="18dp"
+        app:cornerRadius="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/EnableOption" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

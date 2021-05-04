@@ -1,0 +1,70 @@
+<resources>
+    <string name="app_name">SECURICO</string>
+    <string name="TermAndCondition">I have accepted the <b><font color="#3E4BAA"><u>Term &amp; Condition </u></font></b></string>
+    <string name="AlreadyHaveAnAccountSignIn">Already have an account ? <b><font color="#3E4BAA">SIGN IN </font></b></string>
+    <string name="DontHaveAnAccount">Don\'t have an account ? <b><font color="#3E4BAA"><u>SIGN UP </u></font></b></string>
+    <string name="logout">Logout</string>
+    <string name="back">back</string>
+    <string name="AddPanel">Add Panel</string>
+    <string name="PanelAdaminCode">Panel Adamin Code</string>
+    <string name="AddAddress">Add Address</string>
+    <string name="Add">Add</string>
+    <string name="PanelManagment">Panel Managment</string>
+    <string name="IntrusionNumbers">Intrusion Numbers</string>
+    <string name="FireNumbers">Fire Numbers</string>
+    <string name="DeleteAllNumbers">Delete All Numbers</string>
+    <string name="Cancel">Cancel</string>
+    <string name="Save">Save</string>
+    <string name="AddNewDevices">Add New Devices</string>
+    <string name="PlayFireMessage">Play Fire Message</string>
+    <string name="PlayIntrusionMessage">Play Intrusion Message</string>
+    <string name="RecordFireMessage">Record Fire Message</string>
+    <string name="RecordIntrusionMessage">Record Intrusion Message</string>
+    <string name="Number">Number</string>
+    <string name="RetrieveZone">Retrieve Zone</string>
+    <string name="ZoneName">ZoneName</string>
+    <string name="Select">Select</string>
+    <string name="EntryTime">Entry Time</string>
+    <string name="secound">(2-255 secounds)</string>
+    <string name="ExitTime">Exit Time</string>
+    <string name="SounderTime">Sounder Time</string>
+    <string name="ZoneNumber">Zone Number</string>
+    <string name="StartTime">Start Time</string>
+    <string name="EndTime">End Time</string>
+    <string name="SounderActivateWithinSchedule">Sounder Activate Within Schedule</string>
+    <string name="Yes">Yes</string>
+    <string name="No">No</string>
+    <string name="EnableSchedule">Enable Schedule</string>
+    <string name="Send">Send</string>
+    <string name="AutoArm">Auto Arm</string>
+    <string name="time">11:24</string>
+    <string name="AutoDisarm">Auto Disarm</string>
+    <string name="SetHoliday">Set Holiday</string>
+    <string name="More">More</string>
+    <string name="Fan">Fan</string>
+    <string name="Ac">AC</string>
+    <string name="Cooler">Cooler</string>
+    <string name="Television">Television</string>
+    <string name="Alexa">Alexa</string>
+    <string name="AlarmReset">ALARM RESET</string>
+    <string name="SounderOff">SOUNDER OFF</string>
+    <string name="NameOfTheDevice">Name Of The Device</string>
+    <string name="Disarmed">Disarmed</string>
+    <string name="Armed">Armed</string>
+    <string name="Mainsoff">Mains Off</string>
+    <string name="PreviousCode">Previous Code</string>
+    <string name="NewCode">New Code</string>
+    <string name="ReenterNewCode">Re-enterNewCode</string>
+    <string name="Update">Update</string>
+    <string name="Device">Device</string>
+    <string name="CustomerName">Customer Name</string>
+    <string name="SignIn">SIGN IN</string>
+    <string name="RETRIVEZONE">RETRIEVEZONE</string>
+    <string-array name="SpinnerHint">
+        <item>GALAXY GSM CONTROL</item>
+    </string-array>
+    <string-array name="SpinnerHintDays">
+        <item>SUNDAYS</item>
+    </string-array>
+
+</resources>

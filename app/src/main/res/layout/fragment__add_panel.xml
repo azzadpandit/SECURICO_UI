@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fregment.Fragment_AddPanel">
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.google.android.material.appbar.MaterialToolbar
+            android:background="@color/blue"
+            android:layout_width="match_parent"
+            style="@style/Widget.MaterialComponents.Toolbar.Primary"
+            android:layout_height="?actionBarSize">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:id="@+id/imageView10"
+                    android:layout_width="20dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_left_arrow_1_"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="5dp"
+                    android:gravity="center"
+                    android:text="@string/back"
+                    android:textColor="@color/white"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/imageView10"
+                    app:layout_constraintTop_toTopOf="parent" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/AddPanel"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:textSize="25dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.appbar.MaterialToolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="?actionBarSize">
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/spinner"
+            android:elevation="10dp"
+            android:entries="@array/SpinnerHint"
+            android:paddingStart="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/appCompatEditText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/editbox_background_add_panel"
+            android:hint="Enter Site Name"
+            android:padding="12dp"
+            android:textSize="20dp"
+            android:elevation="10dp"
+            app:layout_constraintEnd_toEndOf="@+id/spinner"
+            app:layout_constraintStart_toStartOf="@+id/spinner"
+            app:layout_constraintTop_toBottomOf="@+id/spinner" />
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/editbox_background_add_panel"
+            android:hint="Enter Sim in Panel Mobile"
+            android:padding="12dp"
+            android:textSize="20dp"
+            android:elevation="10dp"
+            app:layout_constraintEnd_toEndOf="@+id/appCompatEditText"
+            app:layout_constraintStart_toStartOf="@+id/appCompatEditText"
+            app:layout_constraintTop_toBottomOf="@+id/appCompatEditText" />
+        <EditText
+            android:id="@+id/editText2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/editbox_background_add_panel"
+            android:elevation="10dp"
+            android:hint="Primary Mobile Number (Alerts)"
+            android:padding="12dp"
+            android:textSize="20dp"
+            app:layout_constraintEnd_toEndOf="@+id/editText"
+            app:layout_constraintStart_toStartOf="@+id/editText"
+            app:layout_constraintTop_toBottomOf="@+id/editText" />
+        <EditText
+            android:id="@+id/editText3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/editbox_background_add_panel"
+            android:elevation="10dp"
+            android:hint="Panic ID"
+            android:padding="12dp"
+            android:textSize="20dp"
+            app:layout_constraintEnd_toEndOf="@+id/editText2"
+            app:layout_constraintStart_toStartOf="@+id/editText2"
+            app:layout_constraintTop_toBottomOf="@+id/editText2" />
+
+        <EditText
+            android:id="@+id/editTextFireNumber5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/editbox_background_add_panel"
+            android:elevation="10dp"
+            android:hint="@string/PanelAdaminCode"
+            android:padding="12dp"
+            android:textSize="20dp"
+            android:layout_marginRight="20dp"
+            app:layout_constraintEnd_toStartOf="@+id/imageButtonFireNumberDelete"
+            app:layout_constraintStart_toStartOf="@+id/editText3"
+            app:layout_constraintTop_toBottomOf="@+id/editText3" />
+        <EditText
+            android:id="@+id/editText5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/editbox_background_add_panel"
+            android:elevation="10dp"
+            android:hint="@string/AddAddress"
+            android:padding="12dp"
+            android:textSize="20dp"
+            app:layout_constraintEnd_toEndOf="@+id/editTextFireNumber5"
+            app:layout_constraintStart_toStartOf="@+id/editTextFireNumber5"
+            app:layout_constraintTop_toBottomOf="@+id/editTextFireNumber5" />
+        <ImageButton
+            android:id="@+id/imageButtonFireNumberDelete"
+            android:layout_width="50dp"
+            android:layout_height="0dp"
+            android:background="@drawable/shape"
+            android:backgroundTint="@color/blue"
+            android:foregroundGravity="center"
+            android:padding="10dp"
+            android:elevation="10dp"
+            android:paddingStart="16dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_send_button"
+            app:layout_constraintBottom_toBottomOf="@+id/editTextFireNumber5"
+            app:layout_constraintEnd_toEndOf="@+id/editText3"
+            app:layout_constraintTop_toTopOf="@+id/editTextFireNumber5"
+            />
+        <ImageButton
+            android:id="@+id/imageButton1"
+            android:layout_width="50dp"
+            android:layout_height="0dp"
+            android:background="@drawable/shape"
+            android:backgroundTint="@color/blue"
+            android:foregroundGravity="center"
+            android:padding="10dp"
+            android:elevation="10dp"
+            android:paddingStart="16dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_send_button"
+            app:layout_constraintBottom_toBottomOf="@+id/editText5"
+            app:layout_constraintEnd_toEndOf="@+id/imageButtonFireNumberDelete"
+            app:layout_constraintStart_toStartOf="@+id/imageButtonFireNumberDelete"
+            app:layout_constraintTop_toTopOf="@+id/editText5" />
+        <com.google.android.material.button.MaterialButton
+            app:cornerRadius="10dp"
+            android:elevation="10dp"
+            android:id="@+id/add"
+            android:layout_marginTop="20dp"
+            android:layout_width="0dp"
+            android:hint="@string/Add"
+            android:textColorHint="@color/white"
+            android:textSize="20dp"
+            android:padding="7dp"
+            android:backgroundTint="@color/blue"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="@+id/imageButton1"
+            app:layout_constraintStart_toStartOf="@+id/editText5"
+            app:layout_constraintTop_toBottomOf="@+id/editText5" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/panelManagment"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="20dp"
+            android:backgroundTint="@color/blue"
+            android:hint="@string/PanelManagment"
+            android:padding="7dp"
+            android:textColorHint="@color/white"
+            android:textSize="20dp"
+            app:cornerRadius="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/add"
+            app:layout_constraintStart_toStartOf="@+id/add"
+            app:layout_constraintTop_toBottomOf="@+id/add" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

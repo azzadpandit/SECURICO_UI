@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fregment.Fragment_ZoneDetails">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewZoneDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextFireNumber5"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/editbox_background_add_panel"
+        android:elevation="10dp"
+        android:hint="@string/ZoneName"
+        android:singleLine="true"
+        android:padding="12dp"
+        android:textSize="18dp"
+        app:layout_constraintEnd_toStartOf="@+id/editText6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerViewZoneDetails" />
+
+    <EditText
+        android:id="@+id/editText6"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/editbox_background_add_panel"
+        android:elevation="10dp"
+        android:hint="@string/Number"
+        android:padding="12dp"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextFireNumber5"
+        app:layout_constraintEnd_toStartOf="@+id/imageButtonFireNumberDelete"
+        app:layout_constraintTop_toTopOf="@+id/editTextFireNumber5"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ImageButton
+        android:layout_marginEnd="10dp"
+        android:id="@+id/imageButtonFireNumberDelete"
+        android:layout_width="50dp"
+        android:layout_height="0dp"
+        android:background="@drawable/shape"
+        android:backgroundTint="@color/blue"
+        android:elevation="10dp"
+        android:foregroundGravity="center"
+        android:padding="10dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_add"
+        app:layout_constraintBottom_toBottomOf="@+id/editText6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/editText6" />
+
+
+
+    <com.google.android.material.button.MaterialButton
+        app:cornerRadius="10dp"
+        app:elevation="20dp"
+        app:strokeColor="@color/blue"
+        app:strokeWidth="1dp"
+        android:layout_margin="10dp"
+        android:hint="@string/RetrieveZone"
+        android:textColorHint="@color/white"
+        android:textSize="18dp"
+        android:padding="10dp"
+        android:backgroundTint="@color/blue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/editTextFireNumber5"
+        />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
