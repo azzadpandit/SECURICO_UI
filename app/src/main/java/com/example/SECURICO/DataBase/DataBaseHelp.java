@@ -62,20 +62,19 @@ public class DataBaseHelp extends SQLiteOpenHelper {
         }
 
     }
-    public String getSingleEntry(String userName)
+    public boolean IsLogin(String username, String password)
     {
-        SQLiteDatabase db=this.getReadableDatabase();
-        Cursor cursor=db.query("LOGIN", null, " USERNAME=?", new String[]{userName}, null, null, null);
-        if(cursor.getCount()<1) // UserName Not Exist
+        SQLiteDatabase db = getReadableDatabase();
+        Cursor cursor = db.rawQuery("select * from "+TABLE_NAME+" where username=? and password=?",new String[]{username,password});
+        if (cursor.getCount()>0)
+        return true;
+        else
         {
-            cursor.close();
-            return "NOT EXIST";
+            return false;
         }
-        cursor.moveToFirst();
-        String password= cursor.getString(cursor.getColumnIndex("PASSWORD"));
-        cursor.close();
-        return password;
+
     }
+
 }
 
 

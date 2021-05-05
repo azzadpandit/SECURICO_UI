@@ -55,6 +55,7 @@
                 app:layout_constraintEnd_toEndOf="@+id/imageView6"
                 app:layout_constraintStart_toStartOf="@+id/imageView6"
                 app:layout_constraintTop_toTopOf="@+id/editTextPassword" />
+
             <androidx.appcompat.widget.AppCompatEditText
                 android:id="@+id/editTextPassword"
                 android:layout_width="0dp"
@@ -62,13 +63,16 @@
                 android:layout_marginStart="5dp"
                 android:layout_marginTop="20dp"
                 android:hint="Password"
-                android:textSize="18dp"
                 android:inputType="textVisiblePassword"
                 android:paddingBottom="15dp"
                 android:textColorHint="@color/lightblack"
+                android:textSize="18dp"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="@+id/Username"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toEndOf="@+id/imageView9"
-                app:layout_constraintTop_toBottomOf="@+id/Username" />
+                app:layout_constraintTop_toBottomOf="@+id/Username"
+                app:layout_constraintVertical_bias="0.0" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 <LinearLayout
     android:orientation="vertical"

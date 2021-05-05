@@ -22,6 +22,7 @@ import android.widget.Toast;
 
 import com.example.SECURICO.Adapters.Adapter_dashbord;
 import com.example.SECURICO.R;
+import com.example.SECURICO.SharedPrefManager.SharedPrefManager;
 import com.example.SECURICO.itemModel;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
@@ -80,7 +81,11 @@ public class Fragment_Dashbord extends Fragment {
                 {
                     case R.id.btnlogout:
                     {
-                        Toast.makeText(activity, "Yes Logout Button <Location tha xml layout androidx toolbar >menu'package' item access>", Toast.LENGTH_SHORT).show();
+                        SharedPrefManager.getInstance(getActivity()).clear();
+                        FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
+                        fragmentTransaction.replace(R.id.mainlayout,new Fragment_Sign_up()).addToBackStack(null).commit();
+
+                      Toast.makeText(activity, "Yes Logout Button <Location tha xml layout androidx toolbar >menu'package' item access>", Toast.LENGTH_SHORT).show();
                     }
                     break;
                 }

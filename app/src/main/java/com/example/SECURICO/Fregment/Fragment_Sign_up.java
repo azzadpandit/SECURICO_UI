@@ -1,5 +1,6 @@
 package com.example.SECURICO.Fregment;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -15,18 +16,19 @@ import android.widget.Toast;
 import com.example.SECURICO.DataBase.DataBaseHelp;
 import com.example.SECURICO.DataBase.userdetails;
 import com.example.SECURICO.R;
+import com.example.SECURICO.SharedPrefManager.SharedPrefManager;
 
 public class Fragment_Sign_up extends Fragment {
     Button Signin;
     EditText cus_customername,cus_phone,cus_email,cus_address,cus_username,cus_password;
     DataBaseHelp databasehelp;
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view= inflater.inflate(R.layout.fragment__sign_up, container, false);
         Signin = view.findViewById(R.id.signup);
+
         Signin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -44,6 +46,20 @@ public class Fragment_Sign_up extends Fragment {
         databasehelp=new DataBaseHelp(getContext());
 
         return view;
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        if (SharedPrefManager.getInstance(getActivity()).iSloggIn());
+            Toast.makeText(getContext(), "user is already available", Toast.LENGTH_SHORT).show();
+            FragmentTransaction ft = getFragmentManager().beginTransaction();
+            ft.replace(R.id.mainlayout, new Fragment_Dashbord());
+            ft.addToBackStack(null);
+            ft.commit();
+
+
+
     }
 
     private void regitionmethod() {
@@ -85,6 +101,7 @@ public class Fragment_Sign_up extends Fragment {
             Boolean test = databasehelp.addUser(str_customername,str_phone,str_email,str_address,str_username,str_password);
             if (test==true)
             {
+
                 Toast.makeText(getContext(), "done", Toast.LENGTH_SHORT).show();
                 FragmentTransaction ft = getFragmentManager().beginTransaction();
                 ft.replace(R.id.mainlayout, new Fragment_Sign_in());
@@ -95,7 +112,7 @@ public class Fragment_Sign_up extends Fragment {
                 Toast.makeText(getContext(), "not done", Toast.LENGTH_SHORT).show();
             }
         }
-
-
     }
+
+
 }
