@@ -80,7 +80,7 @@ public class Fragment_Dashbord extends Fragment {
                 {
                     case R.id.btnlogout:
                     {
-                        Toast.makeText(activity, "toas", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(activity, "Yes Logout Button <Location tha xml layout androidx toolbar >menu'package' item access>", Toast.LENGTH_SHORT).show();
                     }
                     break;
                 }
