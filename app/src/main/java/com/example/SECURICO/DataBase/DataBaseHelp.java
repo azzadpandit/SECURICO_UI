@@ -2,6 +2,7 @@ package com.example.SECURICO.DataBase;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
@@ -60,6 +61,20 @@ public class DataBaseHelp extends SQLiteOpenHelper {
             return true;
         }
 
+    }
+    public String getSingleEntry(String userName)
+    {
+        SQLiteDatabase db=this.getReadableDatabase();
+        Cursor cursor=db.query("LOGIN", null, " USERNAME=?", new String[]{userName}, null, null, null);
+        if(cursor.getCount()<1) // UserName Not Exist
+        {
+            cursor.close();
+            return "NOT EXIST";
+        }
+        cursor.moveToFirst();
+        String password= cursor.getString(cursor.getColumnIndex("PASSWORD"));
+        cursor.close();
+        return password;
     }
 }
 
