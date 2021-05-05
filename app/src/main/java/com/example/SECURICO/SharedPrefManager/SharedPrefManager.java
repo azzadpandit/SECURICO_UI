@@ -44,7 +44,7 @@ public class SharedPrefManager{
                 sharedPreferences.getInt("id",-1),
                 sharedPreferences.getString("email",null),
                 sharedPreferences.getString("username",null),
-                sharedPreferences.getString("name",null)
+                sharedPreferences.getString("password",null)
         );
     }
     public void clear(){
