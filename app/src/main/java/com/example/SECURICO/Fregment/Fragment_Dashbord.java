@@ -2,14 +2,23 @@ package com.example.SECURICO.Fregment;
 
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.example.SECURICO.Adapters.Adapter_dashbord;
 import com.example.SECURICO.R;
@@ -18,13 +27,16 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
 
+import static android.content.ContentValues.TAG;
+
 public class Fragment_Dashbord extends Fragment {
 
     FloatingActionButton addpanel;
     RecyclerView recyclerView ;
     LinearLayoutManager layoutManager;
     ArrayList<itemModel>arrayList;
-    com.example.SECURICO.Adapters.Adapter_dashbord Adapter_dashbord;
+    Adapter_dashbord Adapter_dashbord;
+    Toolbar toolbar;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -32,6 +44,10 @@ public class Fragment_Dashbord extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_dashbord, container, false);
         addpanel = view.findViewById(R.id.AddPanel);
+        AppCompatActivity activity = (AppCompatActivity) getActivity();
+        activity.setSupportActionBar(toolbar);
+        toolbar = (Toolbar) view.findViewById(R.id.toolbarOption);
+
         recyclerView=view.findViewById(R.id.recyclerViewDashbord);
         arrayList = new ArrayList<>();
         itemModel itemModel = new itemModel();itemModel.setName("Name of The device");
@@ -57,8 +73,46 @@ public class Fragment_Dashbord extends Fragment {
 
             }
         });
+        toolbar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(MenuItem item) {
+                switch (item.getItemId())
+                {
+                    case R.id.btnlogout:
+                    {
+                        Toast.makeText(activity, "toas", Toast.LENGTH_SHORT).show();
+                    }
+                    break;
+                }
+                return false;
+            }
+        });
+
+
         return view;
 
     }
 
+
+//    @Override
+//    public void onCreate(@Nullable Bundle savedInstanceState) {
+//        setHasOptionsMenu(true);
+//        super.onCreate(savedInstanceState);
+//    }
+//
+//    @Override
+//    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+//        inflater.inflate(R.menu.toolbar, menu);
+//        super.onCreateOptionsMenu(menu, inflater);
+//
+//    }
+//    // Handle context menu events
+//    public boolean onOptionsItemSelected(MenuItem menuItem) {
+//        int id = menuItem.getItemId();
+//        if (id==R.id.btnlogout);
+//        {
+//            Toast.makeText(getActivity(), "tst", Toast.LENGTH_SHORT).show();
+//        }
+//        return (super.onOptionsItemSelected(menuItem));
+//    }
 }
