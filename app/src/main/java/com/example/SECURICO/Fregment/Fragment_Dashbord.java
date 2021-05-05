@@ -41,12 +41,12 @@ public class Fragment_Dashbord extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_dashbord, container, false);
         addpanel = view.findViewById(R.id.AddPanel);
+        //toolbar k liye AppCompatActivity likhna pdega ye
         AppCompatActivity activity = (AppCompatActivity) getActivity();
         activity.setSupportActionBar(toolbar);
-        toolbar = (Toolbar) view.findViewById(R.id.toolbarOption);
+        toolbar = (Toolbar) view.findViewById(R.id.toolbarOption);//yaha xml se connect androidx.appcompat.widget.Toolbar +id
 
         recyclerView=view.findViewById(R.id.recyclerViewDashbord);
         arrayList = new ArrayList<>();
@@ -94,25 +94,4 @@ public class Fragment_Dashbord extends Fragment {
     }
 
 
-//    @Override
-//    public void onCreate(@Nullable Bundle savedInstanceState) {
-//        setHasOptionsMenu(true);
-//        super.onCreate(savedInstanceState);
-//    }
-//
-//    @Override
-//    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
-//        inflater.inflate(R.menu.toolbar, menu);
-//        super.onCreateOptionsMenu(menu, inflater);
-//
-//    }
-//    // Handle context menu events
-//    public boolean onOptionsItemSelected(MenuItem menuItem) {
-//        int id = menuItem.getItemId();
-//        if (id==R.id.btnlogout);
-//        {
-//            Toast.makeText(getActivity(), "tst", Toast.LENGTH_SHORT).show();
-//        }
-//        return (super.onOptionsItemSelected(menuItem));
-//    }
 }
